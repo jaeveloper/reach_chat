@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "639988104274",
+    "firebase_url": "https://reach-da638.firebaseio.com",
+    "project_id": "reach-da638",
+    "storage_bucket": "reach-da638.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639988104274:android:f1554cbbb6a865a152f38b",
+        "android_client_info": {
+          "package_name": "com.example.reach_voip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639988104274-6367iub3o6sq3mhokqf9gfnindjbqehs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reach_voip",
+            "certificate_hash": "d394e02eb73151c75597a9cd2cb219bff67fca5c"
+          }
+        },
+        {
+          "client_id": "639988104274-gnnhv23l6rinanb3ka85ssjl63paje8t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbJ4XhMQjpaKfKSwzdZRixT8XFKVIBZfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639988104274-gnnhv23l6rinanb3ka85ssjl63paje8t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
