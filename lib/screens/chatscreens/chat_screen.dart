@@ -14,7 +14,6 @@ import 'package:reach_voip/resources/auth_methods.dart';
 import 'package:reach_voip/resources/chat_methods.dart';
 import 'package:reach_voip/resources/storage_methods.dart';
 import 'package:reach_voip/screens/chatscreens/widgets/cached_image.dart';
-import 'package:reach_voip/utils/permissions.dart';
 import 'package:reach_voip/utils/universal_variables.dart';
 import 'package:reach_voip/utils/utilities.dart';
 import 'package:reach_voip/widgets/appbar.dart';

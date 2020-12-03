@@ -1,8 +1,8 @@
-import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:reach_voip/constants/strings.dart';
+import 'package:reach_voip/enum/user_state.dart';
 import 'package:reach_voip/models/user.dart';
 import 'package:reach_voip/utils/utilities.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -30,6 +30,18 @@ class AuthMethods {
         await _userCollection.document(currentUser.uid).get();
 
     return User.fromMap(documentSnapshot.data);
+  }
+
+  Future<User> getUserDetailsById(id) async {
+    try {
+      DocumentSnapshot documentSnapshot =
+          await _userCollection.document(id).get();
+
+      return User.fromMap(documentSnapshot.data);
+    } catch (e) {
+      print(e);
+      return null;
+    }
   }
 
   Future<FirebaseUser> signIn() async {
@@ -90,4 +102,15 @@ class AuthMethods {
     await _googleSignIn.signOut();
     return await _auth.signOut();
   }
+
+  void setUserState({@required String userId, @required UserState userState}) {
+    int stateNum = Utils.stateToNum(userState);
+
+    _userCollection.document(userId).updateData({
+      'state': stateNum,
+    });
+  }
+
+  Stream<DocumentSnapshot> getUserStream({@required String uid}) =>
+      _userCollection.document(uid).snapshots();
 }
