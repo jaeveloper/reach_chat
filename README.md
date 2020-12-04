@@ -1,6 +1,6 @@
-# reach_voip
+# Reach Chat
 
-A new Flutter project.
+A simple chat app with flutter and firebase
 
 ## Getting Started
 
